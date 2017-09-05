@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+
+	<title>JS Promises</title>
+	<link rel="stylesheet" href="./cdn/font-awesome-4.7.0/css/font-awesome.css"/>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+	<section>
+		<p>
+			<img src="./img/sdjs_logo.jpeg" width="550">
+			<br/>
+			<img src="./img/promises-in-js.jpg" alt="Promises in JavaScript" width="150">
+		</p>
+		<p>
+			Dan King
+			<br/>
+				<a href="mailto:danielchristopherking@gmail.com">danielchristopherking@gmail.com</a>
+			<br/>
+				(619) 289-5101
+		</p>
+		<p>
+			September 5, 2017
+		</p>
+	</section>
+
+	<section>
+			<img src="./img/sdjs_logo.jpeg" width="550">
+		<p>
+			As inspired by Kyle Simpson at SDJS-sponsored weekend course
+		</p>
+			<img src="./img/workshop.png" width="550">
+	</section>
+
+
+	<section>
+			<img src="./img/promises-in-js.jpg" alt="Promises in JavaScript" width="150">
+		<p>
+			A promise represents the eventual result of an asynchronous operation.
+		</p>
+
+	</section>
+
+	<section>
+			<img src="./img/workshop.png" width="550">
+
+		<p>A promise is like the ticket you get after placing your order at a fast food restaurant.</p>
+	</section>
+
+	<section>
+		<p>
+			Follow along at <a href="http://votingfun.com/sdjs" target="_blank">www.votingfun.com/sdjs</a>
+		</p>
+	</section>
+
+	<section>
+			<img src="./img/amazon_batteries.jpg"/>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step1.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step2.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step3.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step4.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step5.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			<img src="./img/step6.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>Three States of a Promise</p>
+		<ol>
+			<li>
+				<i class="fa fa-clock-o"></i> Pending
+			</li>
+			<li>
+				<i class="fa fa-smile-o"></i> Fulfilled
+			</li>
+			<li>
+				<i class="fa fa-frown-o"></i> Rejected
+			</li>
+		</ol>
+	</section>
+
+	<section>
+		<p>"Settled" means not pending</p>
+		<ol>
+			<li>
+				<i class="fa fa-clock-o"></i> Pending (not settled)
+			</li>
+			<li>
+				<i class="fa fa-smile-o"></i> Fulfilled (settled)
+			</li>
+			<li>
+				<i class="fa fa-frown-o"></i> Rejected (settled)
+			</li>
+		</ol>
+
+		<p>
+			Being settled is not a state, just a linguistic convenience.
+		</p>
+	</section>
+
+	<section>
+		
+		<h3>Interactive example</h3>
+		<p>
+			<a href="./example.html" target="_blank">www.votingfun.com/sdjs</a>
+		</p>
+	</section>
+
+	<section>
+		<h3>Define a Promise</h3>
+		<p>
+			<img src="./img/promise-define.png"/>
+		</p>
+	</section>
+	<section>
+		<h3>Use a Promise</h3>
+		<p>
+			<img src="./img/promise-use.png"/>
+		</p>
+	</section>
+
+	<section>
+		<p>
+			Promise Features
+		</p>
+		<ul>
+			<li>Promise chaining</li>
+			<li>.all</li>
+			<li>.race</li>
+		<ul>
+	</section>
+
+	<section>
+		<h3>
+			<a href="http://caniuse.com/#feat=promises" target="_blank">Compatibility</a>
+		</h3>
+		<p>
+			<img src="./img/can-i-use.png"/>
+		</p>
+		<a href="http://caniuse.com/#feat=promises" target="_blank">http://caniuse.com/#feat=promises</a>
+	</section>
+
+	<section>
+		<h3>Resources</h3>
+		<p>
+			<a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank">
+JavaScript Promises: an Introduction (Google Developers)</a>
+			<br/>
+
+			<a href="https://scotch.io/tutorials/javascript-promises-for-dummies" target="_blank">
+JavaScript Promises for Dummies (scotch.io)</a>
+			<br/>
+
+			<a href="http://www.javascriptkit.com/javatutors/javascriptpromises.shtml" target="_blank">Beginner's Guide to JavaScript promises</a>
+			<br/>
+
+			<a href="https://promisesaplus.com" target="_blank">Promises/A+</a>
+			<br/>
+
+			<a href="https://ponyfoo.com/articles/es6-promises-in-depth" target="_blank">Promises in Depth</a>
+			<br/>
+
+			<a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md" target="_blank">States and Fates</a>
+			<br/>
+
+			<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects" target="_blank">ECMA6 Specs</a>
+			
+		</p>
+	</section>
+
+
+	<section>
+		<h1>Thank you!</h1>
+		<img src="./img/sdjs_logo.jpeg" width="150">
+		<p>
+			Dan King
+			<a href="mailto:danielchristopherking@gmail.com">danielchristopherking@gmail.com</a>
+			<br>
+			(619) 289-5101
+			<br>
+			Twitter: <a href="https://twitter.com/viewpointpro" target="_blank">@viewpointpro</a>
+			<br>
+			Web: <a href="http://viewpoint.pro" target="_blank">viewpoint.pro</a>
+			<br>
+			Web: <a href="http://votingfun.com/" target="_blank">votingfun.com</a>
+		</p>
+		<img src="./img/Amazon-Basics-AA-Battery.jpg" width="150">
+	</section>
+
+
+
+</div>
+</div>
+<script src="js/reveal.js"></script>
+<script>
+	Reveal.initialize();
+</script>
+</body>
+</html>

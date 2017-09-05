@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>JS Promises Example</title>
+
+	<meta name="description" content="JS Promises Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="./application.css"/>
+
+	<link rel="stylesheet" type="text/css" href="./cdn/toastr/toastr.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/Bootstrap-3.3.7/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/DataTables-1.10.15/css/dataTables.bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/FixedHeader-3.1.2/css/fixedHeader.bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/Responsive-2.1.1/css/responsive.bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/font-awesome-4.7.0/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="./cdn/animate.css"/>
+
+	<link rel="stylesheet" type="text/css" href="./cdn/jquery.slotmachine/jquery.slotmachine.css"/>
+
+	<script type="text/javascript" src="./cdn/jQuery-2.2.4/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="./cdn/toastr/toastr.js"></script>
+	<script type="text/javascript" src="./cdn/Bootstrap-3.3.7/js/bootstrap.js"></script>
+	<script type="text/javascript" src="./cdn/DataTables-1.10.15/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="./cdn/DataTables-1.10.15/js/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="./cdn/FixedHeader-3.1.2/js/dataTables.fixedHeader.js"></script>
+	<script type="text/javascript" src="./cdn/Responsive-2.1.1/js/dataTables.responsive.js"></script>
+
+	<script type="text/javascript" src="./cdn/jquery.slotmachine/jquery.slotmachine.js"></script>
+
+	<script type="text/javascript" src="./application.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	kitchenSlotMachine = $("#kitchenSlotMachine").slotMachine({
+		delay: 500, // Time of each spin.
+	});
+	showScene('scene_1');
+});
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" target="_blank"  href="https://www.amazon.com/gp/offer-listing/B00MNV8E0C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MNV8E0C&linkCode=am2&tag=votingfun-20&linkId=a0609e490d50dec9707d9bce83842e91"><span><img border="0" src="./img/Amazon-Basics-AA-Battery.png" height="25"></span></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=votingfun-20&l=am2&o=1&a=B00MNV8E0C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+		</div>
+
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Links <span class="caret"></span></a>
+					<ul class="dropdown-menu" id="navbar_contestants">
+						<li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank">Introduction to Promises</a></li>
+
+						<li><a href="http://www.javascriptkit.com/javatutors/javascriptpromises.shtml" target="_blank">Beginner's Guide to Promises</a></li>
+
+						<li><a href="https://scotch.io/tutorials/javascript-promises-for-dummies" target="_blank">Promises for Dummies</a></li>
+
+						<li><a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md" target="_blank">States and Fates</a></li>
+
+						<li><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">Kyle Simpson YDKJS Books</a></li>
+						<li><a href="http://sandiegojs.org/" target="_blank">SDJS</a></li>
+
+						<li><a href="http://votingfun.com/sdjs/home.html" target="_blank">Slides</a></li>
+						<li><a href="https://github.com/dan-king/Promises-in-JavaScript-presentation" target="_blank">Source Code</a></li>
+						<li><a href="http://josex2r.github.io/jQuery-SlotMachine/" target="_blank">jQuery Slots</a></li>
+						<li><a href="http://votingfun.com/" target="_blank">Voting Fun</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!--/.navbar-collapse -->
+	</div>
+</nav>
+
+<div>
+	<div id="scene_1" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 1: Customer Places Order</h3>
+
+		<a class="btn btn-default btn-lg fa fa-sign-out" href="javascript:showScene('scene_2')" role="button">Next</a>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer1" style="background-color: #eee"></div>
+			<div class="col-xs-6 bg_worker1" style="background-color: #999"></div>
+		</div>
+
+	</div>
+
+	<div id="scene_2" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 2: Worker gives Customer a Promise</h3>
+
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				State:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-info text-primary left20">
+					<i class="fa fa-clock-o"></i> Pending
+				</p>
+			</div>
+		</div>
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				Settled:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-warning text-primary left20">
+					<i class="fa fa-square"></i> No
+				</p>
+			</div>
+		</div>
+
+		<a class="btn btn-default btn-lg fa fa-sign-out" href="javascript:showScene('scene_3')" role="button">Next</a>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer2" style="background-color: #eee"></div>
+			<div class="col-xs-6 bg_worker2" style="background-color: #999"></div>
+		</div>
+
+	</div>
+
+	<div id="scene_3" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 3: Kitchen Processes Order</h3>
+
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				State:
+			</div>
+			<div class="col-xs-6 text-left">
+				<div id="scene_3_state_pending">
+					<p class="bg-info text-primary left20">
+						<i class="fa fa-clock-o"></i> Pending
+					</p>
+				</div>
+				<div id="scene_3_state_fulfilled">
+					<p class="bg-success text-primary left20">
+						<i class="fa fa-smile-o"></i> Fulfilled
+					</p>
+				</div>
+				<div id="scene_3_state_rejected">
+					<p class="bg-danger text-primary left20">
+						<i class="fa fa-frown-o"></i> Rejected
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				Settled:
+			</div>
+			<div class="col-xs-6 text-left">
+				<div id="scene_3_settled_yes">
+					<p class="bg-info text-primary left20">
+						<i class="fa fa-check-circle"></i> Yes
+					</p>
+				</div>
+				<div id="scene_3_settled_no">
+					<p class="bg-warning text-primary left20">
+						<i class="fa fa-square"></i> No
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<a id="scene_3_next_button" class="btn btn-default btn-lg fa fa-sign-out" href="javascript:showScene('scene_4')" role="button">Next</a>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer3b" style="background-color: #eee">
+				<div id="kitchenSlotMachine">
+					<div><img src="img/power_outage.png" width="100" height="100"/></div>
+					<div><img src="img/strike.png" width="100" height="100"/></div>
+					<div><img src="img/empty.png" width="100" height="100"/></div>
+					<div><img src="img/burger.png" width="100" height="100"/></div>
+				</div>
+				<div>
+					<a class="btn btn-default btn-lg fa fa-history top20" href="javascript:spin_machine()" role="button"> Spin Again</a>
+				</div>
+			</div>
+			<div class="col-xs-6 bg_worker3" style="background-color: #999"></div>
+		</div>
+
+	</div>
+
+	<div id="scene_4" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 4: Call customer back</h3>
+
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				State:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-info text-primary left20 normal-text">
+					<i class="fa fa-question-circle"></i> Either "Fulfilled" or "Rejected"
+				</p>
+			</div>
+		</div>
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				Settled:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-info text-primary left20">
+					<i class="fa fa-check-circle"></i> Yes
+				</p>
+			</div>
+		</div>
+
+		<a class="btn btn-default btn-lg fa fa-sign-out" href="javascript:showScene('scene_5')" role="button">Scene 5: Fulfilled</a>
+		<a class="btn btn-default btn-lg fa fa-sign-out" href="javascript:showScene('scene_6')" role="button">Scene 6: Rejected</a>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer4" style="background-color: #eee"></div>
+			<div class="col-xs-6 bg_worker4" style="background-color: #999"></div>
+		</div>
+
+	</div>
+
+	<div id="scene_5" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 5: Promise Success</h3>
+
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				State:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-success text-primary left20">
+					<i class="fa fa-smile-o"></i> Fulfilled
+				</p>
+			</div>
+		</div>
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				Settled:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-info text-primary left20">
+					<i class="fa fa-check-circle"></i> Yes
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer5" style="background-color: #eee"></div>
+			<div class="col-xs-6 bg_worker5" style="background-color: #999"></div>
+		</div>
+	</div>
+
+	<div id="scene_6" class="container text-center corner50 bg-primary">
+		<h3><i class="fa fa-film"></i> Scene 6: Promise Failure</h3>
+
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				State:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-danger text-primary left20">
+					<i class="fa fa-frown-o"></i> Rejected
+				</p>
+			</div>
+		</div>
+		<div class="row bold-text">
+			<div class="col-xs-6 text-right">
+				Settled:
+			</div>
+			<div class="col-xs-6 text-left">
+				<p class="bg-info text-primary left20">
+					<i class="fa fa-check-circle"></i> Yes
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6 bg_customer6" style="background-color: #eee"></div>
+			<div class="col-xs-6 bg_worker6" style="background-color: #999"></div>
+		</div>
+	</div>
+<div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_1')" role="button"> Scene 1</a>
+		</div>
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_2')" role="button"> Scene 2</a>
+		</div>
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_3')" role="button"> Scene 3</a>
+		</div>
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_4')" role="button"> Scene 4</a>
+		</div>
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_5')" role="button"> Scene 5</a>
+		</div>
+		<div class="col-xs-4 col-sm-2 top20">
+			<a class="btn btn-default btn-lg fa fa-film" href="javascript:showScene('scene_6')" role="button"> Scene 6</a>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer top20">
+
+	<div class="corner50" style="display:inline-block">
+		<a href="https://www.amazon.com/gp/product/0984782850/?tag=votingfun-20" target="_blank">
+			<img src="./img/cracking-the-code-interview.jpg" width="250" />
+		</a>
+	</div>
+
+	<div class="corner50" style="display:inline-block">
+		<a href="https://www.amazon.com/Complete-Software-Developers-Career-Guide/dp/0999081411/?tag=votingfun-20" target="_blank">
+			<img src="./img/soft-dev-career-guide.jpg" width="250" />
+		</a>
+	</div>
+
+	<div class="corner50" style="display:inline-block">
+		<a href="https://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-Count/dp/B00MNV8E0C/?tag=votingfun-20" target="_blank">
+			<img src="./img/amazon_batteries.jpg" width="250" />
+		</a>
+	</div>
+
+</footer>
+
+</body>
+</html>

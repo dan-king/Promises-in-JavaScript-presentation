@@ -1,0 +1,214 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+#kitchenSlotMachine {
+	width:100px;
+	height:100px;
+	overflow: hidden;
+	display: inline-block;
+	text-align: left;
+	border: 5px solid black;
+}
+
+.text-right {
+	text-align:right;
+}
+
+.padding20 {
+	padding: 20px;
+}
+
+.corner5 {
+	padding: 20px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.corner10 {
+	padding: 20px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.corner20 {
+	padding: 20px;
+	border:1px solid #ccc;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+.corner50 {
+	padding: 30px;
+	border:1px solid #ccc;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
+
+.border1 {
+	border:1px solid black;
+}
+
+.padding2 {
+	padding: 2px;
+}
+
+.margin2 {
+	margin: 2px;
+}
+
+.radius5 {
+	border-radius: 5px;
+	padding: 2px;
+}
+
+.top20 {
+	margin-top: 20px;
+}
+
+.left20 {
+	padding-left: 20px;
+}
+
+.bold-text {
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+.bg_customer1 { 
+	background: url("./img/scene-1-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_worker1 { 
+	background: url("./img/scene-1-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer2 { 
+	background: url("./img/scene-2-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_worker2 { 
+	background: url("./img/scene-2-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer3 { 
+	background: url("./img/scene-3-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer3b { 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 30%;
+}
+.bg_worker3 { 
+	background: url("./img/scene-3-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer4 { 
+	background: url("./img/scene-4-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_worker4 { 
+	background: url("./img/scene-4-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer5 { 
+	background: url("./img/scene-5-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_worker5 { 
+	background: url("./img/scene-5-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_customer6 { 
+	background: url("./img/scene-6-customer.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+.bg_worker6 { 
+	background: url("./img/scene-6-worker.png") no-repeat center center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 50%;
+	padding-bottom: 50%;
+}
+/*
+ * Footer
+ */
+
+.page-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.page-footer p:last-child {
+  margin-bottom: 0;
+}
